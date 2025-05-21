@@ -1,0 +1,54 @@
+Project Title: Virtual Machine Migration from KVM to VMware vSphere
+Duration: feb 15/2024 – feb 28/2024
+Role: System Administrator 
+Environment: KVM (libvirt/QEMU), VMware vSphere 7, ESXi, vCenter, CentOS, Ubuntu, Windows Server
+________________________________________
+Project Summary:
+Successfully migrated 40+ virtual machines from an open-source KVM environment to a VMware vSphere cluster to improve scalability, centralize management, and align with enterprise virtualization standards.
+________________________________________
+Objectives:
+•	Replace decentralized KVM-based virtualization with enterprise-grade VMware infrastructure
+•	Minimize downtime and avoid data loss
+•	Standardize VM provisioning, backups, and monitoring
+•	Integrate with existing VMware-based systems for unified management
+________________________________________
+Scope:
+•	40+ VMs (Linux & Windows) including file servers, web apps, DB servers
+•	From KVM (QEMU/libvirt) to VMware ESXi 7.0 cluster
+•	Local storage and LVM-backed VMs
+•	Migration over secure network (LAN)
+________________________________________
+Key Tasks & Responsibilities:
+1.	Assessment & Planning:
+o	Audited KVM infrastructure: VM specs, disk formats, network configs
+o	Identified OS compatibility issues and created risk/rollback plans
+o	Planned migration windows and performed test conversions
+2.	Tool Selection:
+o	Chose VMware vCenter Converter, OVF Tool, and manual conversion (qemu-img) based on VM type and state
+o	Used qemu-img convert to convert .qcow2 and .raw to .vmdk
+3.	Migration Execution:
+o	Shut down and exported VMs from KVM environment
+o	Converted disk images and created matching hardware profiles in vSphere
+o	Imported VMs into VMware using vCenter/ESXi and adjusted VM tools/drivers
+o	Verified networking and performance post-migration
+4.	Post-Migration Configuration:
+o	Installed VMware Tools / open-vm-tools
+o	Reassigned static IPs and verified DNS registration
+o	Set up VMware snapshots and backup policies (Veeam integration)
+5.	Validation & Decommissioning:
+o	Conducted system tests (login, app functionality, disk I/O, backups)
+o	Documented changes and updated the asset inventory
+o	Decommissioned KVM hosts after final backup
+________________________________________
+Results & Impact:
+•	Completed migration with less than 15 minutes of average downtime per VM
+•	Reduced administrative overhead by 30% using centralized vCenter management
+•	Improved VM performance and monitoring
+•	Ensured future scalability and integration with enterprise DR and backup solutions
+________________________________________
+Tools & Technologies Used:
+•	KVM/Libvirt, qemu-img, Virt-Manager
+•	VMware vSphere, ESXi, vCenter, VMware Converter, OVF Tool
+•	Veeam Backup & Replication
+•	Linux CLI tools, scp, rsync, virt-customize
+
