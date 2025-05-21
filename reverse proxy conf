@@ -1,0 +1,29 @@
+Project Title: Reverse Proxy Setup Using Nginx
+Duration: feb2025 – march 2024
+Role: System Administrator
+Environment: centos, Nginx, Docker, SSL (Let's Encrypt), Web Applications (Node.js, PHP, Python)
+________________________________________
+Project Summary:
+Configured and deployed Nginx as a reverse proxy to route traffic to multiple backend services securely and efficiently. This setup centralized traffic control, enabled SSL termination, and improved load management for internal applications.
+________________________________________
+Objectives:
+•	Route incoming traffic to internal services using subdomains and paths
+•	Secure all HTTP services with HTTPS (SSL termination)
+•	Enable centralized access logs and error handling
+•	Simplify firewall rules and server exposure
+________________________________________
+Scope:
+•	3+ backend services (e.g., app.example.com, api.example.com, admin.example.com)
+•	Nginx running on a public-facing centos  VM
+•	Backends running on Docker containers or internal IPs
+•	Let's Encrypt SSL with auto-renewal
+________________________________________
+Key Tasks & Responsibilities:
+1. Initial Setup
+•	Installed Nginx on centos using dnf
+•	Configured firewall to allow ports 80 and 443
+•	Secured SSH access and hardened the system
+2. Reverse Proxy Configuration
+•	Created separate Nginx config files for each domain/service under /etc/nginx/config.d/example.com 
+•	Used proxy_pass directives to forward traffic:
+
