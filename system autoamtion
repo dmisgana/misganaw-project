@@ -1,0 +1,63 @@
+Project Title: Infrastructure Monitoring with Prometheus and Grafana
+Duration:  April  2025- may 2025
+Role: System Administrator
+Tools Used: Prometheus, Grafana, Node Exporter, Alertmanager, centos , Docker, Nginx
+________________________________________
+Project Summary:
+Designed and deployed a full-stack monitoring solution using Prometheus and Grafana to monitor system performance, resource usage, and server availability across a Linux-based infrastructure.
+________________________________________
+Objectives:
+•	Implement real-time monitoring and alerting for CPU, memory, disk, and network usage
+•	Centralize performance metrics from multiple servers
+•	Visualize data trends and historical usage
+•	Automate alerts for proactive issue resolution
+________________________________________
+Scope:
+•	20+ Linux servers (Ubuntu, CentOS, windows )
+•	Monitored: system metrics (CPU, memory, disk, processes), availability, and uptime
+•	Tools: Prometheus + Node Exporter + Alertmanager + Grafana
+•	Deployment via Docker containers
+________________________________________
+Key Tasks & Responsibilities:
+1. Planning & Architecture
+•	Identified key metrics to monitor
+•	Designed architecture diagram with exporters, Prometheus server, and Grafana dashboard
+•	Chose Docker for rapid deployment and portability
+2. Prometheus Setup
+•	Installed Prometheus in Docker container
+•	Configured prometheus.yml to scrape metrics from Node Exporters
+•	Grouped targets by role (web, db, app)
+3. Node Exporter Deployment
+•	Installed Node Exporter on each monitored host
+•	Enabled system services to start on boot
+•	Verified data collection endpoints on port 9100,9182
+4. Grafana Configuration
+•	Installed Grafana via Docker
+•	Connected Grafana to Prometheus as data source
+•	Created custom dashboards:
+o	System Overview (CPU, memory, disk)
+o	Disk I/O and Network Traffic
+o	Per-server health views
+5. Alerting System
+•	Integrated Alertmanager with Prometheus
+•	Created alert rules (e.g., CPU > 90%, Disk usage > 80%)
+•	Configured email and Slack notifications
+6. Optimization & Maintenance
+•	Tuned scrape intervals and retention period
+•	Documented setup for future scalability
+•	Trained junior admins on reading dashboards and responding to alerts
+________________________________________
+Results & Impact:
+•	Achieved 100% visibility into server health and performance
+•	Detected and resolved high disk usage on 2 production servers proactively
+•	Improved incident response time by 60% through real-time alerts
+•	Standardized monitoring across all environments
+________________________________________
+Tools & Technologies Used:
+•	Prometheus: Time-series monitoring and alerting
+•	Grafana: Visualization and dashboarding
+•	Node Exporter: Linux system metrics exporter
+•	Alertmanager: Alert routing and notification
+•	Docker, Linux, systemd, nginx
+________________________________________
+
